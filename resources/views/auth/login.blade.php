@@ -1,22 +1,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-
-   <!-- Buat background -->
-<style>
-    html, body {
-    position: relative;
-    /* text-align: center; */
-    /* display: flex; */
-    justify-content: center;
-    align-items: center; 
-    /* min-height: 100%; */
-    background:url(../assets/css/bg.jpg) no-repeat;
-    background-size: 100%;
-}
-
-  </style>
-
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,29 +8,18 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
+    
+@extends('layouts.app')
+
+@section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="p-3 mb-2 bg-transparent text-dark" >
-                    <div class="text text-center">
-                      <!-- Nambahin foto wikrama -->
-                      <img src="assets/css/wk.png"  class="img-responsive" style="width: 45px; height: 45px;" />
-                      WELCOME BACK
-                    </div>
-                </div>
-                
+                <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}" >
-                   
+                    <form method="POST" action="{{ route('login') }}">
                         @csrf
 
                         <div class="form-group row">
@@ -108,6 +81,8 @@
         </div>
     </div>
 </div>
+@endsection
+
 
     <!-- Optional JavaScript; choose one of the two! -->
 
