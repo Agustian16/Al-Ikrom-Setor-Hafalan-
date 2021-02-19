@@ -19,6 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+<<<<<<< HEAD
 // ? End of Welcome Route
 
 
@@ -35,3 +36,8 @@ Route::prefix('pemray')->group(function() {
          });
 
 // * End of Rayon Supervisor Route 
+=======
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+>>>>>>> login
