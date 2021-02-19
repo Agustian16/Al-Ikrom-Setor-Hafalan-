@@ -1,8 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+<<<<<<< HEAD
 use App\Http\Controllers\KepsekController as KC;
 use App\Http\Controllers\PemrayController as PC;
+=======
+use App\Http\Controllers\HafalanController;
+
+>>>>>>> setor-hafalan
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,6 +24,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // ? End of Welcome Route
 
@@ -41,3 +47,6 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 >>>>>>> login
+=======
+Route::resource('hafalans',HafalanController::class);
+>>>>>>> setor-hafalan
