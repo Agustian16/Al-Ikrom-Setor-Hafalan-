@@ -46,7 +46,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="./icons.html">
+                        <a href="./dashboard.html">
                             <i class="nc-icon nc-single-02"></i>
                             <p>Santri</p>
                         </a>

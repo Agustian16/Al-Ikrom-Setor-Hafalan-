@@ -1,13 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-<<<<<<< HEAD
+
 use App\Http\Controllers\KepsekController as KC;
 use App\Http\Controllers\PemrayController as PC;
-=======
+use App\Http\Controllers\adminController as AC;
 use App\Http\Controllers\HafalanController;
 
->>>>>>> setor-hafalan
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,9 +24,27 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 // ? End of Welcome Route
+
+// !Login Route
+// Auth::routes();
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// !End of Login Route
+
+
+// ^ Admin Route
+
+Route::prefix('admin/')->group(function() {
+    Route::get('/',[AC::class, 'index'])->name('admin.index');
+    Route::get('/santri',[AC::class, 'santri'])->name('admin.santri');
+});
+
+
+
+// ^ End of Admin Route
+
 
 
 // ^ Headmaster Route
@@ -42,11 +60,9 @@ Route::prefix('pemray')->group(function() {
          });
 
 // * End of Rayon Supervisor Route 
-=======
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
->>>>>>> login
-=======
+
+// ~Hafalan Route
 Route::resource('hafalans',HafalanController::class);
->>>>>>> setor-hafalan
+
+// ~End of Hafafan Route
