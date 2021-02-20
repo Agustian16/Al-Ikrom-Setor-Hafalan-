@@ -5,7 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KepsekController as KC;
 use App\Http\Controllers\PemrayController as PC;
 use App\Http\Controllers\adminController as AC;
-use App\Http\Controllers\HafalanController;
+use App\Http\Controllers\HafalanController as HC;
+use App\Http\Controllers\tasmiController as TC;
 
 
 /*
@@ -63,6 +64,16 @@ Route::prefix('pemray')->group(function() {
 
 
 // ~Hafalan Route
-Route::resource('hafalans',HafalanController::class);
+Route::prefix('hafalan')->group(function() {
+    Route::get('/',[HC::class,'index'])->name('hafalans.index');
+         });
 
 // ~End of Hafafan Route
+
+
+// & Route Tasmi
+Route::prefix('tasmi')->group(function() {
+    Route::get('/',[TC::class,'index'])->name('tasmi.index');
+         });
+
+// & End of Route Tasmi
