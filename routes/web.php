@@ -9,6 +9,7 @@ use App\Http\Controllers\HafalanController;
 use App\Http\Controllers\SantriController;
 use App\Http\Controllers\MurobiController;
 use App\Http\Controllers\RayonController;
+use App\Http\Controllers\MapelController;
 
 
 
@@ -99,3 +100,12 @@ Route::post('/rayon/{nis}/update', [RayonController::class, 'update']);
 Route::get('/rayon/{nis}/delete', [RayonController::class, 'delete']);
 
 // End of rayon Route
+
+// mapel Route 
+Route::get('/mapel', [MapelController::class,'index']);
+Route::post('/mapel/create', [MapelController::class, 'create']);
+Route::get('/mapel/{nis}/edit', [MapelController::class, 'edit']);
+Route::post('/mapel/{nis}/update', [MapelController::class, 'update']);
+Route::get('/mapel/{nis}/delete', [MapelController::class, 'delete']);
+
+// End of mapel Route

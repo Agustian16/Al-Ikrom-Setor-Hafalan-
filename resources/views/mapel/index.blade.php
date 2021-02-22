@@ -191,7 +191,7 @@
             @endif
         <div class="row">
         <div class="col-6">
-            <h1>Rayon</h1>
+            <h1>Mapel</h1>
           </div>
           <div class="col-6">
             <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#createModal">
@@ -202,18 +202,16 @@
       <TABLE class="table table-hover table-bordered dataTable" id="example" style="width:100%">
         <tr>
             <th>ID</th>
-            <TH>Nama Rayon</TH>
-            <TH>Pembimbing Rayon</TH>
+            <TH>Kegiatan</TH>
             <TH>Aksi</TH>
         </tr>
-         @foreach($data_rayon as $rayon)
+         @foreach($data_mapel as $mapel)
         <tr>
-            <td>{{ $rayon->id}}</td>
-            <td>{{ $rayon->nama_rayon}}</td>
-            <td>{{ $rayon->pembimbing_rayon}}</td>
+            <td>{{ $mapel->id}}</td>
+            <td>{{ $mapel->kegiatan}}</td>
             <td>
-            <a href="/rayon/{{$rayon->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
-            <a href="/rayon/{{$rayon->id}}/delete" class='btn btn-danger btn-sm' onclick ="return confirm('Apakah anda yakin?')">Delete</a>
+            <a href="/mapel/{{$mapel->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
+            <a href="/mapel/{{$mapel->id}}/delete" class='btn btn-danger btn-sm' onclick ="return confirm('Apakah anda yakin?')">Delete</a>
             </td>
         </tr>
         @endforeach
@@ -233,17 +231,12 @@
             </button>
           </div>
           <div class="modal-body">
-           <form action="/rayon/create" method="POST">
+           <form action="/mapel/create" method="POST">
             {{csrf_field()}}
             
             <div class="form-group">
-              <label for="exampleInputEmail1">Nama Rayon</label>
-              <input name="nama_rayon" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="nama_rayon"  placeholder="Nama rayon">
-            </div>
-
-            <div class="form-group">
-              <label for="exampleInputEmail1">Pembimbing Rayon</label>
-              <input name="pembimbing_rayon" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="pembimbing_rayon" placeholder="pembimbing_rayon" >
+              <label for="exampleInputEmail1">Kegiatan</label>
+              <input name="kegiatan" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="kegiatan"  placeholder="Kegiatan">
             </div>
 
           </div>

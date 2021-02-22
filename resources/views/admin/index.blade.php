@@ -64,13 +64,13 @@
                         </a>
                     </li>
                     <li>
-                        <a href="./notifications.html">
+                        <a href="./surah">
                             <i class="nc-icon nc-book-bookmark"></i>
                             <p>Surah</p>
                         </a>
                     </li>
                     <li>
-                        <a href="./user.html">
+                        <a href="./mapel">
                             <i class="nc-icon nc-single-copy-04"></i>
                             <p>Mapel</p>
                         </a>
