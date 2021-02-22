@@ -214,9 +214,7 @@
             <td>{{ $murobi->username}}</td>
             <td>{{ $murobi->password}}</td>
             <td>
-            <a  class='btn btn-warning' data-toggle="modal" data-target="#editModal">
-            Edit 
-            </a>
+            <a href="/murobi/{{$murobi->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
             <a href="/murobi/{{$murobi->id}}/delete" class='btn btn-danger' onclick ="return confirm('Apakah anda yakin?')">Delete</a>
             </td>
         </tr>
@@ -265,43 +263,7 @@
       </div>
     </div>   
 
-    <!-- Modal Edit -->
-    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Silahkan Edit</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-            <form action="/murobi/{{$murobi->id}}/update" method="POST">
-                {{csrf_field()}}
-                
-                <div class="form-group">
-                <label for="exampleInputEmail1">Nama murobi</label>
-                <input name="nama_murobi" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="nama_murobi"  placeholder="Nama_murobi" value="{{$murobi->nama_murobi}}">
-                </div>
-
-                <div class="form-group">
-                <label for="exampleInputEmail1">Username</label>
-                <input name="username" type="text" class="form-control" nama="exampleInputEmail1" aria-describedby="username"  placeholder="Username" value="{{$murobi->username}}">
-                </div>
-
-                <div class="form-group">
-                <label for="exampleInputEmail1">Password</label>
-                <input name="password" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="password" placeholder="Password" value="{{$murobi->password}}">
-                </div>
-
-            <button type="submit" class="btn btn-warning  ">Update</button>
-            
-            </form>
-            </div>
-            </div>
-        </div>
-        </div>   
-
+    
 
             <footer class="footer footer-black  footer-white ">
                 <div class="container-fluid">

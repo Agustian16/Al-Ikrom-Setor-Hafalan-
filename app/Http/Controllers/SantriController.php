@@ -28,7 +28,7 @@ class SantriController extends Controller
     public function update(Request $request, $nis)
     {   
     	$santri = Santri::where('nis', $nis);
-    	$santri->update($request->all());
+    	$santri->update($request->except(['_token']));
     	return redirect('/santri')->with('sukses','Data Berhasil Di update');
     }
 

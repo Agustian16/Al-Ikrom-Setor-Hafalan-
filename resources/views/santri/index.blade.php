@@ -221,7 +221,7 @@
             <td>{{ $santri->nama_ibu}}</td>
             <td>{{ $santri->no_telp}}</td>
             <td>
-            <a data-toggle="modal" data-target="#editModal" class='btn btn-warning'>Edit</a>
+            <a href="/santri/{{$santri->nis}}/edit" class="btn btn-warning ">Edit</a>
             <a href="/santri/{{$santri->nis}}/delete" class='btn btn-danger' onclick ="return confirm('Apakah anda yakin?')">Delete</a>
             </td>
         </tr>
@@ -295,64 +295,7 @@
           </div>
         </div>
       </div>
-    </div>   
-
-    <!-- Modal Edit -->
-    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Silahkan Edit</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-          <form action="/santri/{{$santri->nis}}/update" method="POST">
-            {{csrf_field()}}
-            
-            <div class="form-group">
-              <label for="exampleInputEmail1">Nama Santri</label>
-              <input name="nama" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="nama"  placeholder="Nama" value="{{$santri->nama}}">
-            </div>
-
-            <div class="form-group">
-              <label for="exampleInputEmail1">Tingkat</label>
-              <input name="tingkat" type="text" class="form-control" nama="exampleInputEmail1" aria-describedby="tingkat"  placeholder="Tingkat" value="{{$santri->tingkat}}">
-            </div>
-
-            <div class="form-group">
-              <label for="exampleInputEmail1">Id Rayon</label>
-              <input name="id_rayon" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="id_rayon" placeholder="ID Rayon" value="{{$santri->id_rayon}}">
-            </div>
-
-            <div class="form-group">
-              <label for="exampleInputEmail1">Alamat</label>
-              <input name="alamat" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="alamat" placeholder="Alamat" value="{{$santri->alamat}}">
-            </div>
-
-            <div class="form-group">
-              <label for="exampleInputEmail1">Nama Ayah</label>
-              <input name="nama_ayah" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="nama_ayah" placeholder="Nama Ayah" value="{{$santri->nama_ayah}}">
-            </div>
-
-            <div class="form-group">
-              <label for="exampleInputEmail1">Nama Ibu</label>
-              <input name="nama_ibu" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="nama_ibu" placeholder="Nama Ibu" value="{{$santri->nama_ibu}}">
-            </div>
-
-            <div class="form-group">
-              <label for="exampleInputEmail1">Nomor Telepon</label>
-              <input name="no_telp" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="no_telp" placeholder="Nomor Telepon" value="{{$santri->no_telp}}">
-            </div>
-
-          <button type="submit" class="btn btn-warning  ">Update</button>
-           
-          </form>
-          </div>
-        </div>
-      </div>
-    </div>   
+    </div>     
 
             <footer class="footer footer-black  footer-white ">
                 <div class="container-fluid">
