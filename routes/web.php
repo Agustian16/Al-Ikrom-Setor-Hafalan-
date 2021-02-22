@@ -6,6 +6,9 @@ use App\Http\Controllers\KepsekController as KC;
 use App\Http\Controllers\PemrayController as PC;
 use App\Http\Controllers\adminController as AC;
 use App\Http\Controllers\HafalanController;
+use App\Http\Controllers\SantriController;
+use App\Http\Controllers\MurobiController;
+
 
 
 /*
@@ -66,3 +69,23 @@ Route::prefix('pemray')->group(function() {
 Route::resource('hafalans',HafalanController::class);
 
 // ~End of Hafafan Route
+
+
+// Santri Route
+Route::get('/santri', [SantriController::class,'index']);
+Route::post('/santri/create', [SantriController::class, 'create']);
+Route::get('/santri/{nis}/edit', [SantriController::class, 'edit']);
+Route::post('/santri/{nis}/update', [SantriController::class, 'update']);
+Route::get('/santri/{nis}/delete', [SantriController::class, 'delete']);
+
+// End of Santri Route
+
+
+// murobi Route
+Route::get('/murobi', [MurobiController::class,'index']);
+Route::post('/murobi/create', [MurobiController::class, 'create']);
+Route::get('/murobi/{nis}/edit', [MurobiController::class, 'edit']);
+Route::post('/murobi/{nis}/update', [MurobiController::class, 'update']);
+Route::get('/murobi/{nis}/delete', [MurobiController::class, 'delete']);
+
+// End of murobi Route

@@ -182,74 +182,178 @@
                         </div>
                     </div>
 
-
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="card ">
-                            <div class="card-header ">
-                                <h5 class="card-title">Statistik Hafalan</h5>
-                                <p class="card-category">24 Hours performance</p>
-                            </div>
-                            <div class="card-body ">
-                                <canvas id=chartHours width="400" height="100"></canvas>
-                            </div>
-                            <div class="card-footer ">
-                                <hr>
-                                <div class="stats">
-                                    <i class="fa fa-history"></i> Always Update
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card ">
-                            <div class="card-header ">
-                                <h5 class="card-title">Email Statistics</h5>
-                                <p class="card-category">Last Campaign Performance</p>
-                            </div>
-                            <div class="card-body ">
-                                <canvas id="chartEmail"></canvas>
-                            </div>
-                            <div class="card-footer ">
-                                <div class="legend">
-                                    <i class="fa fa-circle text-primary"></i> Opened
-                                    <i class="fa fa-circle text-warning"></i> Read
-                                    <i class="fa fa-circle text-danger"></i> Deleted
-                                    <i class="fa fa-circle text-gray"></i> Unopened
-                                </div>
-                                <hr>
-                                <div class="stats">
-                                    <i class="fa fa-calendar"></i> Number of emails sent
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card card-chart">
-                            <div class="card-header">
-                                <h5 class="card-title">NASDAQ: AAPL</h5>
-                                <p class="card-category">Line Chart with Points</p>
-                            </div>
-                            <div class="card-body">
-                                <canvas id="speedChart" width="400" height="100"></canvas>
-                            </div>
-                            <div class="card-footer">
-                                <div class="chart-legend">
-                                    <i class="fa fa-circle text-info"></i> Tesla Model S
-                                    <i class="fa fa-circle text-warning"></i> BMW 5 Series
-                                </div>
-                                <hr />
-                                <div class="card-stats">
-                                    <i class="fa fa-check"></i> Data information certified
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    <div class="container">
+        @if(session('sukses'))
+            <div class="alert alert-success" role="alert">
+              {{session('sukses')}}
             </div>
+            @endif
+        <div class="row">
+        <div class="col-6">
+            <h1>Data</h1>
+          </div>
+          <div class="col-6">
+            <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#createModal">
+            Add data 
+            </button>
+          </div>
+      
+      <TABLE class="table table-hover table-bordered dataTable" id="example" style="width:100%">
+        <tr>
+            <th>Nis</th>
+            <TH>Nama Santri</TH>
+            <TH>Tingkat</TH>
+            <TH>ID Rayon</TH>
+            <TH>Alamat</TH>
+            <TH>Nama Ayah</TH>
+            <TH>Nama Ibu</TH>
+            <TH>Nomor Telepon</TH>
+            <TH>Aksi</TH>
+        </tr>
+         @foreach($data_santri as $santri)
+        <tr>
+            <td>{{ $santri->nis}}</td>
+            <td>{{ $santri->nama}}</td>
+            <td>{{ $santri->tingkat}}</td>
+            <td>{{ $santri->id_rayon}}</td>
+            <td>{{ $santri->alamat}}</td>
+            <td>{{ $santri->nama_ayah}}</td>
+            <td>{{ $santri->nama_ibu}}</td>
+            <td>{{ $santri->no_telp}}</td>
+            <td>
+            <a data-toggle="modal" data-target="#editModal" class='btn btn-warning'>Edit</a>
+            <a href="/santri/{{$santri->nis}}/delete" class='btn btn-danger' onclick ="return confirm('Apakah anda yakin?')">Delete</a>
+            </td>
+        </tr>
+        @endforeach
+      </table>
+
+        </div>
+      </div>
+
+    <!-- Modal Create-->
+    <div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Silahkan Isi</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+           <form action="/santri/create" method="POST">
+            {{csrf_field()}}
+            
+             <div class="form-group">
+              <label for="exampleInputEmail1">Nis</label>
+              <input name="nis" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="nis"  placeholder="Nis">
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputEmail1">Nama santri</label>
+              <input name="nama" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="nama"  placeholder="Nama Santri">
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputEmail1">Tingkat</label>
+              <input name="tingkat" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="tingkat" placeholder="Tingkat" >
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputEmail1">ID Rayon</label>
+              <input name="id_rayon" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="id_rayon" placeholder="ID Rayon" >
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputEmail1">Alamat</label>
+              <input name="alamat" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="alamat" placeholder="Alamat" >
+            </div>
+            
+            <div class="form-group">
+              <label for="exampleInputEmail1">Nama Ayah</label>
+              <input name="nama_ayah" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="nama_ayah" placeholder="Nama Ayah" >
+            </div>
+
+            
+            <div class="form-group">
+              <label for="exampleInputEmail1">Nama  Ibu</label>
+              <input name="nama_ibu" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="nama Ibu" placeholder="Nama _ibu" >
+            </div>
+
+            
+            <div class="form-group">
+              <label for="exampleInputEmail1">Nomor Telepon</label>
+              <input name="no_telp" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="no_telp" placeholder="Nomor Telepon" >
+            </div>
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>   
+
+    <!-- Modal Edit -->
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Silahkan Edit</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+          <form action="/santri/{{$santri->nis}}/update" method="POST">
+            {{csrf_field()}}
+            
+            <div class="form-group">
+              <label for="exampleInputEmail1">Nama Santri</label>
+              <input name="nama" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="nama"  placeholder="Nama" value="{{$santri->nama}}">
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputEmail1">Tingkat</label>
+              <input name="tingkat" type="text" class="form-control" nama="exampleInputEmail1" aria-describedby="tingkat"  placeholder="Tingkat" value="{{$santri->tingkat}}">
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputEmail1">Id Rayon</label>
+              <input name="id_rayon" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="id_rayon" placeholder="ID Rayon" value="{{$santri->id_rayon}}">
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputEmail1">Alamat</label>
+              <input name="alamat" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="alamat" placeholder="Alamat" value="{{$santri->alamat}}">
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputEmail1">Nama Ayah</label>
+              <input name="nama_ayah" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="nama_ayah" placeholder="Nama Ayah" value="{{$santri->nama_ayah}}">
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputEmail1">Nama Ibu</label>
+              <input name="nama_ibu" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="nama_ibu" placeholder="Nama Ibu" value="{{$santri->nama_ibu}}">
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputEmail1">Nomor Telepon</label>
+              <input name="no_telp" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="no_telp" placeholder="Nomor Telepon" value="{{$santri->no_telp}}">
+            </div>
+
+          <button type="submit" class="btn btn-warning  ">Update</button>
+           
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>   
+
             <footer class="footer footer-black  footer-white ">
                 <div class="container-fluid">
                     <div class="row">
@@ -290,3 +394,4 @@
 </body>
 
 </html>
+

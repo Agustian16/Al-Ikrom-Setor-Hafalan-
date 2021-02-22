@@ -181,75 +181,128 @@
                             </div>
                         </div>
                     </div>
-
-
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="card ">
-                            <div class="card-header ">
-                                <h5 class="card-title">Statistik Hafalan</h5>
-                                <p class="card-category">24 Hours performance</p>
-                            </div>
-                            <div class="card-body ">
-                                <canvas id=chartHours width="400" height="100"></canvas>
-                            </div>
-                            <div class="card-footer ">
-                                <hr>
-                                <div class="stats">
-                                    <i class="fa fa-history"></i> Always Update
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card ">
-                            <div class="card-header ">
-                                <h5 class="card-title">Email Statistics</h5>
-                                <p class="card-category">Last Campaign Performance</p>
-                            </div>
-                            <div class="card-body ">
-                                <canvas id="chartEmail"></canvas>
-                            </div>
-                            <div class="card-footer ">
-                                <div class="legend">
-                                    <i class="fa fa-circle text-primary"></i> Opened
-                                    <i class="fa fa-circle text-warning"></i> Read
-                                    <i class="fa fa-circle text-danger"></i> Deleted
-                                    <i class="fa fa-circle text-gray"></i> Unopened
-                                </div>
-                                <hr>
-                                <div class="stats">
-                                    <i class="fa fa-calendar"></i> Number of emails sent
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card card-chart">
-                            <div class="card-header">
-                                <h5 class="card-title">NASDAQ: AAPL</h5>
-                                <p class="card-category">Line Chart with Points</p>
-                            </div>
-                            <div class="card-body">
-                                <canvas id="speedChart" width="400" height="100"></canvas>
-                            </div>
-                            <div class="card-footer">
-                                <div class="chart-legend">
-                                    <i class="fa fa-circle text-info"></i> Tesla Model S
-                                    <i class="fa fa-circle text-warning"></i> BMW 5 Series
-                                </div>
-                                <hr />
-                                <div class="card-stats">
-                                    <i class="fa fa-check"></i> Data information certified
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+               
+                <div class="container">
+        @if(session('sukses'))
+            <div class="alert alert-success" role="alert">
+              {{session('sukses')}}
             </div>
+            @endif
+        <div class="row">
+        <div class="col-6">
+            <h1>Data Murobi</h1>
+          </div>
+          <div class="col-6">
+            <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#createModal">
+            Add data 
+            </button>
+          </div>
+      
+      <TABLE class="table table-hover table-bordered dataTable" id="example" style="width:100%">
+        <tr>
+            <th>ID</th>
+            <TH>Nama Murobi</TH>
+            <TH>Username</TH>
+            <TH>Password</TH>
+            <TH>Aksi</TH>
+        </tr>
+         @foreach($data_murobi as $murobi)
+        <tr>
+            <td>{{ $murobi->id}}</td>
+            <td>{{ $murobi->nama_murobi}}</td>
+            <td>{{ $murobi->username}}</td>
+            <td>{{ $murobi->password}}</td>
+            <td>
+            <a  class='btn btn-warning' data-toggle="modal" data-target="#editModal">
+            Edit 
+            </a>
+            <a href="/murobi/{{$murobi->id}}/delete" class='btn btn-danger' onclick ="return confirm('Apakah anda yakin?')">Delete</a>
+            </td>
+        </tr>
+        @endforeach
+      </table>
+
+        </div>
+      </div>
+
+    <!-- Modal Create -->
+    <div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Silahkan Isi</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+           <form action="/murobi/create" method="POST">
+            {{csrf_field()}}
+            
+            <div class="form-group">
+              <label for="exampleInputEmail1">Nama murobi</label>
+              <input name="nama_murobi" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="nama_murobi"  placeholder="Nama murobi">
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputEmail1">Username</label>
+              <input name="username" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="username" placeholder="Username" >
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputEmail1">Password</label>
+              <input name="password" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="password" placeholder="Password" >
+            </div>
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>   
+
+    <!-- Modal Edit -->
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Silahkan Edit</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+            <form action="/murobi/{{$murobi->id}}/update" method="POST">
+                {{csrf_field()}}
+                
+                <div class="form-group">
+                <label for="exampleInputEmail1">Nama murobi</label>
+                <input name="nama_murobi" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="nama_murobi"  placeholder="Nama_murobi" value="{{$murobi->nama_murobi}}">
+                </div>
+
+                <div class="form-group">
+                <label for="exampleInputEmail1">Username</label>
+                <input name="username" type="text" class="form-control" nama="exampleInputEmail1" aria-describedby="username"  placeholder="Username" value="{{$murobi->username}}">
+                </div>
+
+                <div class="form-group">
+                <label for="exampleInputEmail1">Password</label>
+                <input name="password" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="password" placeholder="Password" value="{{$murobi->password}}">
+                </div>
+
+            <button type="submit" class="btn btn-warning  ">Update</button>
+            
+            </form>
+            </div>
+            </div>
+        </div>
+        </div>   
+
+
             <footer class="footer footer-black  footer-white ">
                 <div class="container-fluid">
                     <div class="row">
