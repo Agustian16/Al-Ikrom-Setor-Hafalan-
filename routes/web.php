@@ -8,6 +8,7 @@ use App\Http\Controllers\adminController as AC;
 use App\Http\Controllers\HafalanController;
 use App\Http\Controllers\SantriController;
 use App\Http\Controllers\MurobiController;
+use App\Http\Controllers\RayonController;
 
 
 
@@ -89,3 +90,12 @@ Route::post('/murobi/{nis}/update', [MurobiController::class, 'update']);
 Route::get('/murobi/{nis}/delete', [MurobiController::class, 'delete']);
 
 // End of murobi Route
+
+// rayon Route 
+Route::get('/rayon', [RayonController::class,'index']);
+Route::post('/rayon/create', [RayonController::class, 'create']);
+Route::get('/rayon/{nis}/edit', [RayonController::class, 'edit']);
+Route::post('/rayon/{nis}/update', [RayonController::class, 'update']);
+Route::get('/rayon/{nis}/delete', [RayonController::class, 'delete']);
+
+// End of rayon Route

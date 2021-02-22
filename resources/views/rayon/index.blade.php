@@ -40,7 +40,7 @@
             <div class="sidebar-wrapper">
                 <ul class="nav">
                     <li class="active ">
-                        <a href="./dashboard.html">
+                        <a href="./admin">
                             <i class="nc-icon nc-bank"></i>
                             <p>Dashboard</p>
                         </a>
@@ -191,7 +191,7 @@
             @endif
         <div class="row">
         <div class="col-6">
-            <h1>Data Murobi</h1>
+            <h1>Rayon</h1>
           </div>
           <div class="col-6">
             <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#createModal">
@@ -202,20 +202,18 @@
       <TABLE class="table table-hover table-bordered dataTable" id="example" style="width:100%">
         <tr>
             <th>ID</th>
-            <TH>Nama Murobi</TH>
-            <TH>Username</TH>
-            <TH>Password</TH>
+            <TH>Nama Rayon</TH>
+            <TH>Pembimbing Rayon</TH>
             <TH>Aksi</TH>
         </tr>
-         @foreach($data_murobi as $murobi)
+         @foreach($data_rayon as $rayon)
         <tr>
-            <td>{{ $murobi->id}}</td>
-            <td>{{ $murobi->nama_murobi}}</td>
-            <td>{{ $murobi->username}}</td>
-            <td>{{ $murobi->password}}</td>
+            <td>{{ $rayon->id}}</td>
+            <td>{{ $rayon->nama_rayon}}</td>
+            <td>{{ $rayon->pembimbing_rayon}}</td>
             <td>
-            <a href="/murobi/{{$murobi->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
-            <a href="/murobi/{{$murobi->id}}/delete" class='btn btn-danger' onclick ="return confirm('Apakah anda yakin?')">Delete</a>
+            <a href="/rayon/{{$rayon->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
+            <a href="/rayon/{{$rayon->id}}/delete" class='btn btn-danger btn-sm' onclick ="return confirm('Apakah anda yakin?')">Delete</a>
             </td>
         </tr>
         @endforeach
@@ -235,24 +233,19 @@
             </button>
           </div>
           <div class="modal-body">
-           <form action="/murobi/create" method="POST">
+           <form action="/rayon/create" method="POST">
             {{csrf_field()}}
             
             <div class="form-group">
-              <label for="exampleInputEmail1">Nama murobi</label>
-              <input name="nama_murobi" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="nama_murobi"  placeholder="Nama murobi">
+              <label for="exampleInputEmail1">Nama Rayon</label>
+              <input name="nama_rayon" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="nama_rayon"  placeholder="Nama rayon">
             </div>
 
             <div class="form-group">
-              <label for="exampleInputEmail1">Username</label>
-              <input name="username" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="username" placeholder="Username" >
+              <label for="exampleInputEmail1">Pembimbing Rayon</label>
+              <input name="pembimbing_rayon" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="pembimbing_rayon" placeholder="pembimbing_rayon" >
             </div>
 
-            <div class="form-group">
-              <label for="exampleInputEmail1">Password</label>
-              <input name="password" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="password" placeholder="Password" >
-            </div>
-            
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
