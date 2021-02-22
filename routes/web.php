@@ -7,6 +7,7 @@ use App\Http\Controllers\PemrayController as PC;
 use App\Http\Controllers\adminController as AC;
 use App\Http\Controllers\HafalanController as HC;
 use App\Http\Controllers\tasmiController as TC;
+use App\Http\Controllers\OrtuController as OC;
 
 
 /*
@@ -77,3 +78,10 @@ Route::prefix('tasmi')->group(function() {
          });
 
 // & End of Route Tasmi
+
+
+// ? Parents Route
+Route::prefix('ortu-report')->group(function() {
+    Route::get('/',[OC::class,'index'])->name('ortu-report.index');
+         });
+// ? End of Parents Route
