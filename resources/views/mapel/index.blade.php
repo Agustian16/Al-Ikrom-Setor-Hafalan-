@@ -181,8 +181,9 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="container">
+                </div>
+               
+                <div class="container">
         @if(session('sukses'))
             <div class="alert alert-success" role="alert">
               {{session('sukses')}}
@@ -190,7 +191,7 @@
             @endif
         <div class="row">
         <div class="col-6">
-            <h1>Data Santri</h1>
+            <h1>Mapel</h1>
           </div>
           <div class="col-6">
             <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#createModal">
@@ -200,29 +201,17 @@
       
       <TABLE class="table table-hover table-bordered dataTable" id="example" style="width:100%">
         <tr>
-            <th>Nis</th>
-            <TH>Nama Santri</TH>
-            <TH>Tingkat</TH>
-            <TH>ID Rayon</TH>
-            <TH>Alamat</TH>
-            <TH>Nama Ayah</TH>
-            <TH>Nama Ibu</TH>
-            <TH>Nomor Telepon</TH>
+            <th>ID</th>
+            <TH>Kegiatan</TH>
             <TH>Aksi</TH>
         </tr>
-         @foreach($data_santri as $santri)
+         @foreach($data_mapel as $mapel)
         <tr>
-            <td>{{ $santri->nis}}</td>
-            <td>{{ $santri->nama}}</td>
-            <td>{{ $santri->tingkat}}</td>
-            <td>{{ $santri->id_rayon}}</td>
-            <td>{{ $santri->alamat}}</td>
-            <td>{{ $santri->nama_ayah}}</td>
-            <td>{{ $santri->nama_ibu}}</td>
-            <td>{{ $santri->no_telp}}</td>
+            <td>{{ $mapel->id}}</td>
+            <td>{{ $mapel->kegiatan}}</td>
             <td>
-            <a data-toggle="modal" data-target="#editModal" class="btn btn-warning ">Edit</a>
-            <a href="/santri/{{$santri->nis}}/delete" class='btn btn-danger' onclick ="return confirm('Apakah anda yakin?')">Delete</a>
+            <a href="/mapel/{{$mapel->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
+            <a href="/mapel/{{$mapel->id}}/delete" class='btn btn-danger btn-sm' onclick ="return confirm('Apakah anda yakin?')">Delete</a>
             </td>
         </tr>
         @endforeach
@@ -231,7 +220,7 @@
         </div>
       </div>
 
-    <!-- Modal Create-->
+    <!-- Modal Create -->
     <div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -242,51 +231,14 @@
             </button>
           </div>
           <div class="modal-body">
-           <form action="/santri/create" method="POST">
+           <form action="/mapel/create" method="POST">
             {{csrf_field()}}
             
-             <div class="form-group">
-              <label for="exampleInputEmail1">Nis</label>
-              <input name="nis" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="nis"  placeholder="Nis">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Kegiatan</label>
+              <input name="kegiatan" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="kegiatan"  placeholder="Kegiatan">
             </div>
 
-            <div class="form-group">
-              <label for="exampleInputEmail1">Nama santri</label>
-              <input name="nama" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="nama"  placeholder="Nama Santri">
-            </div>
-
-            <div class="form-group">
-              <label for="exampleInputEmail1">Tingkat</label>
-              <input name="tingkat" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="tingkat" placeholder="Tingkat" >
-            </div>
-
-            <div class="form-group">
-              <label for="exampleInputEmail1">ID Rayon</label>
-              <input name="id_rayon" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="id_rayon" placeholder="ID Rayon" >
-            </div>
-
-            <div class="form-group">
-              <label for="exampleInputEmail1">Alamat</label>
-              <input name="alamat" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="alamat" placeholder="Alamat" >
-            </div>
-            
-            <div class="form-group">
-              <label for="exampleInputEmail1">Nama Ayah</label>
-              <input name="nama_ayah" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="nama_ayah" placeholder="Nama Ayah" >
-            </div>
-
-            
-            <div class="form-group">
-              <label for="exampleInputEmail1">Nama  Ibu</label>
-              <input name="nama_ibu" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="nama Ibu" placeholder="Nama _ibu" >
-            </div>
-
-            
-            <div class="form-group">
-              <label for="exampleInputEmail1">Nomor Telepon</label>
-              <input name="no_telp" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="no_telp" placeholder="Nomor Telepon" >
-            </div>
-            
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -295,71 +247,9 @@
           </div>
         </div>
       </div>
-    </div>     
+    </div>   
 
-    <!-- Modal Edit-->
-    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Silahkan Edit</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-            <form action="/santri/{{$santri->nis}}/update" method="POST">
-            {{csrf_field()}}
-
-            <div class="form-group">
-              <label for="exampleInputEmail1">Nis</label>
-              <input name="nis" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="nis"  placeholder="nis" value="{{$santri->nis}}">
-            </div>
-
-            <div class="form-group">
-              <label for="exampleInputEmail1">Nama Santri</label>
-              <input name="nama" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="nama"  placeholder="Nama" value="{{$santri->nama}}">
-            </div>
-
-            <div class="form-group">
-              <label for="exampleInputEmail1">Tingkat</label>
-              <input name="tingkat" type="text" class="form-control" nama="exampleInputEmail1" aria-describedby="tingkat"  placeholder="Tingkat" value="{{$santri->tingkat}}">
-            </div>
-
-            <div class="form-group">
-              <label for="exampleInputEmail1">Id Rayon</label>
-              <input name="id_rayon" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="id_rayon" placeholder="ID Rayon" value="{{$santri->id_rayon}}">
-            </div>
-
-            <div class="form-group">
-              <label for="exampleInputEmail1">Alamat</label>
-              <input name="alamat" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="alamat" placeholder="Alamat" value="{{$santri->alamat}}">
-            </div>
-
-            <div class="form-group">
-              <label for="exampleInputEmail1">Nama Ayah</label>
-              <input name="nama_ayah" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="nama_ayah" placeholder="Nama Ayah" value="{{$santri->nama_ayah}}">
-            </div>
-
-            <div class="form-group">
-              <label for="exampleInputEmail1">Nama Ibu</label>
-              <input name="nama_ibu" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="nama_ibu" placeholder="Nama Ibu" value="{{$santri->nama_ibu}}">
-            </div>
-
-            <div class="form-group">
-              <label for="exampleInputEmail1">Nomor Telepon</label>
-              <input name="no_telp" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="no_telp" placeholder="Nomor Telepon" value="{{$santri->no_telp}}">
-            </div>
-                
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick ="return confirm('Apakah anda sudah yakin dengan data tersebut?')">Close</button>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-            </div>
-            </div>
-        </div>
-        </div>     
+    
 
             <footer class="footer footer-black  footer-white ">
                 <div class="container-fluid">
@@ -401,4 +291,3 @@
 </body>
 
 </html>
-

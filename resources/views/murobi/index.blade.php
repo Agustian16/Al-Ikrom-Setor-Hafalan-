@@ -58,7 +58,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="./tables.html">
+                        <a href="./rayon">
                             <i class="nc-icon nc-tile-56"></i>
                             <p>Rayon</p>
                         </a>

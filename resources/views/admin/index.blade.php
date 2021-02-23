@@ -40,7 +40,7 @@
             <div class="sidebar-wrapper">
                 <ul class="nav">
                     <li class="active ">
-                        <a href="./dashboard.html">
+                        <a href="./admin">
                             <i class="nc-icon nc-bank"></i>
                             <p>Dashboard</p>
                         </a>
@@ -58,19 +58,19 @@
                         </a>
                     </li>
                     <li>
-                        <a href="./tables.html">
+                        <a href="./rayon">
                             <i class="nc-icon nc-tile-56"></i>
                             <p>Rayon</p>
                         </a>
                     </li>
                     <li>
-                        <a href="./notifications.html">
+                        <a href="./surah">
                             <i class="nc-icon nc-book-bookmark"></i>
                             <p>Surah</p>
                         </a>
                     </li>
                     <li>
-                        <a href="./user.html">
+                        <a href="./mapel">
                             <i class="nc-icon nc-single-copy-04"></i>
                             <p>Mapel</p>
                         </a>
