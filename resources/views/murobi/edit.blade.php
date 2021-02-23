@@ -24,13 +24,19 @@
               </div>
 
               <div class="form-group">
-                <label for="exampleInputEmail1">Username</label>
-                <input name="username" type="text" class="form-control" nama="exampleInputEmail1" aria-describedby="username"  placeholder="Username" value="{{$murobi->username}}">
+                <label for="exampleInputEmail1">Status</label>
+                <input name="status" type="text" class="form-control" nama="exampleInputEmail1" aria-describedby="status"  placeholder="Status" value="{{$murobi->status}}">
               </div>
 
-              <div class="form-group">
-                <label for="exampleInputEmail1">Password</label>
-                <input name="password" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="password" placeholder="Password" value="{{$murobi->password}}">
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Select this
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
               </div>
 
             <button type="submit" class="btn btn-warning  ">Update</button>

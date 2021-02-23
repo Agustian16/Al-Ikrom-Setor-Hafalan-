@@ -16,8 +16,7 @@ class CreateTableMurobi extends Migration
         Schema::create('table_murobi', function (Blueprint $table) {
             $table->id();
             $table->string('nama_murobi');
-            $table->string('username');
-            $table->string('password');
+            $table->string('status');
             $table->timestamps();
         });
     }

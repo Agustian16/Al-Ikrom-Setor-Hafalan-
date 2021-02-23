@@ -9,5 +9,5 @@ class Murobi extends Model
 {
     use HasFactory;
     protected $table = 'table_murobi';
-    protected $fillable = ['id', 'nama_murobi', 'username', 'password'];
+    protected $fillable = ['id', 'nama_murobi', 'status'];
 }

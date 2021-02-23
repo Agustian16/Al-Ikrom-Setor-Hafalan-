@@ -9,6 +9,7 @@
     <title>
         AL-IKROM Hafalan by Santri Programmer Al-Ikrom
     </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
@@ -202,17 +203,15 @@
       <TABLE class="table table-hover table-bordered dataTable" id="example" style="width:100%">
         <tr>
             <th>ID</th>
-            <TH>Nama Murobi</TH>
-            <TH>Username</TH>
-            <TH>Password</TH>
+            <TH>Nama Murobi/Mentor</TH>
+            <TH>Status</TH>
             <TH>Aksi</TH>
         </tr>
          @foreach($data_murobi as $murobi)
         <tr>
             <td>{{ $murobi->id}}</td>
             <td>{{ $murobi->nama_murobi}}</td>
-            <td>{{ $murobi->username}}</td>
-            <td>{{ $murobi->password}}</td>
+            <td>{{ $murobi->status}}</td>
             <td>
             <a href="/merk/{{$merk->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
             <a href="/murobi/{{$murobi->id}}/delete" class='btn btn-danger' onclick ="return confirm('Apakah anda yakin?')">Delete</a>
@@ -239,20 +238,22 @@
             {{csrf_field()}}
             
             <div class="form-group">
-              <label for="exampleInputEmail1">Nama murobi</label>
-              <input name="nama_murobi" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="nama_murobi"  placeholder="Nama murobi">
+              <label for="exampleInputEmail1">Nama Murobi/Mentro</label>
+              <input name="nama_murobi" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="nama_murobi"  placeholder="Nama murobi/mentor">
             </div>
 
             <div class="form-group">
-              <label for="exampleInputEmail1">Username</label>
-              <input name="username" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="username" placeholder="Username" >
+              <label for="exampleInputEmail1">status</label>
+              <div class="col-md-6">
+                  <select name="status" type="text" class="form-select" id="exampleInputEmail1" aria-label="Default select example">
+                     <option selected>Open this select Role</option>
+                     <option value="MUROBI">Murobi</option>
+                     <option value="MENTOR">Mentor</option>                  
+                  </select>
+               </div>
             </div>
 
-            <div class="form-group">
-              <label for="exampleInputEmail1">Password</label>
-              <input name="password" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="password" placeholder="Password" >
-            </div>
-            
+
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -294,6 +295,8 @@
     <script src="../assets/js/paper-dashboard.min.js?v=2.0.1" type="text/javascript"></script>
     <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
     <script src="../assets/demo/demo.js"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function() {
             // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
