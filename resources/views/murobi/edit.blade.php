@@ -18,20 +18,20 @@
           <form action="/murobi/{{$murobi->id}}/update" method="POST">
             {{csrf_field()}}
             
-            <div class="form-group">
+              <div class="form-group">
                 <label for="exampleInputEmail1">Nama murobi</label>
                 <input name="nama_murobi" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="nama_murobi"  placeholder="Nama_murobi" value="{{$murobi->nama_murobi}}">
-                </div>
+              </div>
 
-                <div class="form-group">
+              <div class="form-group">
                 <label for="exampleInputEmail1">Username</label>
                 <input name="username" type="text" class="form-control" nama="exampleInputEmail1" aria-describedby="username"  placeholder="Username" value="{{$murobi->username}}">
-                </div>
+              </div>
 
-                <div class="form-group">
+              <div class="form-group">
                 <label for="exampleInputEmail1">Password</label>
                 <input name="password" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="password" placeholder="Password" value="{{$murobi->password}}">
-                </div>
+              </div>
 
             <button type="submit" class="btn btn-warning  ">Update</button>
             
