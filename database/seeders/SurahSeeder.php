@@ -16,20 +16,20 @@ class SurahSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('surahs')->insert([
+        DB::table('table_surah')->insert([
          [
             'id'                    => 1,
             'nama_surah'     => 'Al-Fatihah',
             'jenis_surah'      => 'Mekah',
             'arti_surah'        => 'Pembukaan',
-            'jml-ayat'           => 7,
+            'jumlah_ayat'           => 7,
          ],
             [
                 'id'                => 2,
                 'nama_surah' => 'Al-Baqarah',
                 'jenis_surah'  => 'Madaniyah',
                 'arti_surah'    => 'Sapi Betina',
-                'jml-ayat'       =>  286,
+                'jumlah_ayat'       =>  286,
                 ] 
                ]);
 
