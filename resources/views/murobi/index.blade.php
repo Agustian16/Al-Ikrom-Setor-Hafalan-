@@ -213,7 +213,7 @@
             <td>{{ $murobi->nama_murobi}}</td>
             <td>{{ $murobi->status}}</td>
             <td>
-            <a href="/merk/{{$merk->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
+            <a href="/murobi/{{$murobi->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
             <a href="/murobi/{{$murobi->id}}/delete" class='btn btn-danger' onclick ="return confirm('Apakah anda yakin?')">Delete</a>
             </td>
         </tr>
