@@ -53,9 +53,9 @@
                             <label for="role" class="col-md-4 col-form-label text-md-right">Role</label>
 
                             <div class="col-md-6">
-                            <select id="role" class="form-select" aria-label="Default select example">
+                            <select name="role" id="role" class="form-select" aria-label="Default select example">
                                 <option selected>Open this select Role</option>
-                                <option value="ADMIN">Admin</option>
+                                <option value="ADMIN">ADMIN</option>
                                 <option value="MUROBI">Murobi</option>
                                 <option value="MENTOR">Mentor</option>
                                 <option value="KEPSEK">Kepsek</option>

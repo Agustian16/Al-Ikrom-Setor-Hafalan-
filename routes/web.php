@@ -33,15 +33,15 @@ Route::get('/', function () {
 // ? End of Welcome Route
 
 // !Login Route
-// Auth::routes();
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Auth::routes();
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // !End of Login Route
 
 
 // ^ Admin Route
 
-Route::prefix('admin/')->group(function() {
+Route::prefix('/admin')->group(function() {
     Route::get('/',[AC::class, 'index'])->name('admin.index');
     Route::get('/santri',[AC::class, 'santri'])->name('admin.santri');
 });

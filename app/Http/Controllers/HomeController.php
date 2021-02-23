@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -25,17 +27,17 @@ class HomeController extends Controller
     {
         {
             if(Auth::user()->role == "ADMIN"){
-                return redirect('admin.index'); //Mending pake redirect jangan pake view
+                return redirect('admin'); 
             }elseif (Auth::user()->role == "MUROBI"){
-                return redirect('murobi.index');
+                return redirect('murobi');
             }elseif (Auth::user()->role == "MENTOR"){
-                return redirect('mentor.index');
+                return redirect('mentor');
             }elseif (Auth::user()->role == "KEPSEK"){
-                return redirect('kepsek.index');
+                return redirect('kepsek');
             }elseif (Auth::user()->role == "PEMRAY"){
-                return redirect('pemray.index');
+                return redirect('pemray');
             }elseif (Auth::user()->role == "ORTU"){
-                return redirect('ortu.index');
+                return redirect('ortu');
             };
             return view('home');
         }

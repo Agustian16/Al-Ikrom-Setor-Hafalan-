@@ -11,7 +11,7 @@
     justify-content: center;
     align-items: center; 
     /* min-height: 100%; */
-    background:url(../assets/css/bg.jpg) no-repeat;
+    background:url(../assets-login/css/bg1.jpg) no-repeat;
     background-size: 100%;
 }
 
@@ -34,11 +34,11 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card" style="opacity: 0.8;">
                 <div class="p-3 mb-2 bg-transparent text-dark" >
                     <div class="text text-center">
                       <!-- Nambahin foto wikrama -->
-                      <img src="assets/css/wk.png"  class="img-responsive" style="width: 45px; height: 45px;" />
+                      <img src="assets-login/css/wk.png"  class="img-responsive" style="width: 45px; height: 45px;" />
                       WELCOME BACK
                     </div>
                 </div>
