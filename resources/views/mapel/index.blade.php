@@ -210,8 +210,8 @@
             <td>{{ $mapel->id}}</td>
             <td>{{ $mapel->kegiatan}}</td>
             <td>
-            <a href="/mapel/{{$mapel->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
-            <a href="/mapel/{{$mapel->id}}/delete" class='btn btn-danger btn-sm' onclick ="return confirm('Apakah anda yakin?')">Delete</a>
+            <a href="/mapel/{{$mapel->id}}/edit" class="btn btn-warning">Edit</a>
+            <a href="/mapel/{{$mapel->id}}/delete" class='btn btn-danger' onclick ="return confirm('Apakah anda yakin?')">Delete</a>
             </td>
         </tr>
         @endforeach

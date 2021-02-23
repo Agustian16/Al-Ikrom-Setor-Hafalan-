@@ -212,8 +212,8 @@
             <td>{{ $rayon->nama_rayon}}</td>
             <td>{{ $rayon->pembimbing_rayon}}</td>
             <td>
-            <a href="/rayon/{{$rayon->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
-            <a href="/rayon/{{$rayon->id}}/delete" class='btn btn-danger btn-sm' onclick ="return confirm('Apakah anda yakin?')">Delete</a>
+            <a href="/rayon/{{$rayon->id}}/edit" class="btn btn-warning">Edit</a>
+            <a href="/rayon/{{$rayon->id}}/delete" class='btn btn-danger' onclick ="return confirm('Apakah anda yakin?')">Delete</a>
             </td>
         </tr>
         @endforeach

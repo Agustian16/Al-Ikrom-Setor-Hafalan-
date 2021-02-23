@@ -221,7 +221,7 @@
             <td>{{ $santri->nama_ibu}}</td>
             <td>{{ $santri->no_telp}}</td>
             <td>
-            <a href="/merk/{{$merk->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
+            <a href="/santri/{{$santri->nis}}/edit" class="btn btn-warning">Edit</a>
             <a href="/santri/{{$santri->nis}}/delete" class='btn btn-danger' onclick ="return confirm('Apakah anda yakin?')">Delete</a>
             </td>
         </tr>

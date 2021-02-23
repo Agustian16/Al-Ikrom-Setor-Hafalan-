@@ -24,26 +24,17 @@
               </div>
 
               <div class="form-group">
-                <label for="exampleInputEmail1">Status</label>
-                <input name="status" type="text" class="form-control" nama="exampleInputEmail1" aria-describedby="status"  placeholder="Status" value="{{$murobi->status}}">
-              </div>
-
-              <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Select this
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
+                <label for="exampleInputEmail1">status</label>
+                <div class="col-md-6">
+                    <select name="status" type="text" class="form-select" id="exampleInputEmail1" aria-label="Default select example">
+                      <option selected>Open this select Role</option>
+                      <option value="MUROBI">Murobi</option>
+                      <option value="MENTOR">Mentor</option>                  
+                    </select>
                 </div>
               </div>
 
-            <button type="submit" class="btn btn-warning  ">Update</button>
-            
-
-          <button type="submit" class="btn btn-warning  ">Submit</button>
-           
+            <button type="submit" class="btn btn-warning  ">Update</button>           
           </form>
         </div>  
     </div>
