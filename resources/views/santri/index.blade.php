@@ -39,13 +39,13 @@
             </div>
             <div class="sidebar-wrapper">
                 <ul class="nav">
-                    <li class="active ">
+                    <li>
                         <a href="./admin">
                             <i class="nc-icon nc-bank"></i>
                             <p>Dashboard</p>
                         </a>
                     </li>
-                    <li>
+                    <li class="active ">
                         <a href="./santri">
                             <i class="nc-icon nc-single-02"></i>
                             <p>Santri</p>

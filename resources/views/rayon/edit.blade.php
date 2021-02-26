@@ -25,7 +25,7 @@
 
                 <div class="form-group">
                 <label for="exampleInputEmail1">Pembimbing rayon</label>
-                <input name="username" type="text" class="form-control" nama="exampleInputEmail1" aria-describedby="pembimbing_rayon"  placeholder="Pembimbing_rayon" value="{{$rayon->pembimbing_rayon}}">
+                <input name="pembimbing_rayon" type="text" class="form-control" nama="exampleInputEmail1" aria-describedby="pembimbing_rayon"  placeholder="Pembimbing_rayon" value="{{$rayon->pembimbing_rayon}}">
                 </div>
                 
             <button type="submit" class="btn btn-warning  ">Update</button>

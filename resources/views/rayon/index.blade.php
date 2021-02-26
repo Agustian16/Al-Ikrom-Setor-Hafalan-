@@ -39,7 +39,7 @@
             </div>
             <div class="sidebar-wrapper">
                 <ul class="nav">
-                    <li class="active ">
+                    <li>
                         <a href="./admin">
                             <i class="nc-icon nc-bank"></i>
                             <p>Dashboard</p>
@@ -57,7 +57,7 @@
                             <p>Murobi/Mentor</p>
                         </a>
                     </li>
-                    <li>
+                    <li class="active ">
                         <a href="./rayon">
                             <i class="nc-icon nc-tile-56"></i>
                             <p>Rayon</p>
@@ -189,10 +189,14 @@
               {{session('sukses')}}
             </div>
             @endif
-        <div class="row">
-        <div class="col-6">
-            <h1>Rayon</h1>
-          </div>
+        
+          <div class="row">
+            <div class="col-md-12">
+                <div class="card ">
+                    <div class="card-header ">
+                        <h5 class="card-title">Statistik Hafalan</h5>
+                        <p class="card-category">24 Hours performance</p>
+                    </div>
           <div class="col-6">
             <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#createModal">
             Add data 
@@ -221,6 +225,9 @@
 
         </div>
       </div>
+      </div>
+        </div>
+                
 
     <!-- Modal Create -->
     <div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -255,9 +262,7 @@
         </div>
       </div>
     </div>   
-
     
-
             <footer class="footer footer-black  footer-white ">
                 <div class="container-fluid">
                     <div class="row">

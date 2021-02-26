@@ -39,7 +39,7 @@
             </div>
             <div class="sidebar-wrapper">
                 <ul class="nav">
-                    <li class="active ">
+                    <li>
                         <a href="./admin">
                             <i class="nc-icon nc-bank"></i>
                             <p>Dashboard</p>
@@ -69,7 +69,7 @@
                             <p>Surah</p>
                         </a>
                     </li>
-                    <li>
+                    <li class="active ">
                         <a href="./mapel">
                             <i class="nc-icon nc-single-copy-04"></i>
                             <p>Mapel</p>

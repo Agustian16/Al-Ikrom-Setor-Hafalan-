@@ -40,8 +40,8 @@
             </div>
             <div class="sidebar-wrapper">
                 <ul class="nav">
-                    <li class="active ">
-                        <a href="./dashboard.html">
+                    <li>
+                        <a href="./admin">
                             <i class="nc-icon nc-bank"></i>
                             <p>Dashboard</p>
                         </a>
@@ -52,7 +52,7 @@
                             <p>Santri</p>
                         </a>
                     </li>
-                    <li>
+                    <li class="active ">
                         <a href="./murobi">
                             <i class="nc-icon nc-badge"></i>
                             <p>Murobi/Mentor</p>
@@ -65,13 +65,13 @@
                         </a>
                     </li>
                     <li>
-                        <a href="./notifications.html">
+                        <a href="./surah">
                             <i class="nc-icon nc-book-bookmark"></i>
                             <p>Surah</p>
                         </a>
                     </li>
                     <li>
-                        <a href="./user.html">
+                        <a href="./mapel">
                             <i class="nc-icon nc-single-copy-04"></i>
                             <p>Mapel</p>
                         </a>
