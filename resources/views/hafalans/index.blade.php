@@ -55,58 +55,6 @@ Note that we use `flex-direction: row-reverse` on the container
     <title>Input Hafalan Santri</title>
 </head>
 
-<body>
-
-    <div class="container">
-        <h2 class="alert alert-primary text-center mt-5 inline"> Input Hafalan</h2>
-        <a href="">
-            <img src="https://img.icons8.com/ios-glyphs/45/000000/arrow-pointing-left--v2.png" />
-        </a>
-
-        
-        @if ($errors->any())
-        <div class="alert alert-danger">
-            <strong>Whoops!</strong> There were some problems with your input.<br><br>
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-
-        <form action="{{ route('hafalan.store') }}" method="POST">
-          @csrf
-            <div class="form-group">
-                <div class="row">
-                    <div class="col-md-2">
-                        <label for="Pilih Santri">Pilih Santri</label>
-                    </div>
-                    <div class="col-md-9 ml-0">
-                        <select name="" id="" class="form-control col-5" name="nama_santri">
-                            <option value="">Murayama</option>
-                            <option value="">Nandeska</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-
-        <h4>Mulai Dari</h4>
-        <div class="row">
-            <div class="col-md-6-inline ml-3">
-                <div class="form-group">
-                    <label for="Awal Surah">Pilih Surah</label>
-                    <input type="text" class="form-control" placeholder="Masukan surah awal" id="Awal Surah" name="surah_awal">
-                </div>
-            </div>
-            <div class="col-md-6-inline ml-5">
-                <div class="form-group">
-                    <label for="Pilih Ayat">Pilih Ayat</label>
-                    <input type="text" class="form-control" placeholder="Masukan surah akhir" id="Pilih Ayat" name="ayat_awal">
-                </div>
-            </div>
-        </div>
-
         <h4>Sampai Dengan</h4>
         <div class="row">
             <div class="col-md-6-inline ml-3">
@@ -127,6 +75,26 @@ Note that we use `flex-direction: row-reverse` on the container
             <label for="">Keterangan</label>
             <textarea name="" id="" class="form-control col-10" name="keterangan"></textarea>
 
+      <div class="row m-5">
+        
+        <div class="card-body text-center">
+          <h5 class="card-title">Catatan</h5>
+          <Textarea class="form-control" style="height:150px"></Textarea>
+        </div>
+
+        <div class="card-body">
+          <h5 class="card-title">Hasil Setoran</h5>
+          <div class="p-rating">
+            <button class="p-rating-star">☆</button>
+            <button class="p-rating-star">☆</button>
+            <button class="p-rating-star">☆</button>
+            <button class="p-rating-star">☆</button>
+            <button class="p-rating-star">★</button>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                <button type="submit" class="btn btn-primary" style="width:150px">Simpan</button>
         </div>
 
         {{-- <div class="form-group mr-5">
@@ -151,6 +119,10 @@ Note that we use `flex-direction: row-reverse` on the container
 
 
 
+<<<<<<< HEAD
+=======
+      </div>
+>>>>>>> 6aae8c9d1e326368d17011f021be26923d7d3c07
 
 
     <!-- Optional JavaScript; choose one of the two! -->
