@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KepsekController as KC;
 use App\Http\Controllers\PemrayController as PC;
 use App\Http\Controllers\adminController as AC;
-use App\Http\Controllers\HafalanController as HC;
+use App\Http\Controllers\HafalanController;
 use App\Http\Controllers\SantriController;
 use App\Http\Controllers\MurobiController;
 use App\Http\Controllers\RayonController;
@@ -33,7 +33,7 @@ Route::get('/', function () {
 // ? End of Welcome Route
 
 // !Login Route
-// Auth::routes();
+Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // !End of Login Route
@@ -68,10 +68,7 @@ Route::prefix('pemray')->group(function() {
 
 
 // ~Hafalan Route
-Route::prefix('hafalan')->group(function() {
-    Route::get('/',[HC::class,'index'])->name('hafalan.index');
-    Route::post('/',[HC::class,'index'])->name('hafalan.store');
-         });
+Route::resource('hafalans',HafalanController::class);
 
 // ~End of Hafafan Route
 

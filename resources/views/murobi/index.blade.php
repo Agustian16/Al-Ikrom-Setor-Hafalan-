@@ -244,13 +244,11 @@
 
             <div class="form-group">
               <label for="exampleInputEmail1">status</label>
-              <div class="col-md-6">
-                  <select name="status" type="text" class="form-select" id="exampleInputEmail1" aria-label="Default select example">
+                  <select name="status" type="text" class="form-control" id="exampleInputEmail1" aria-label="Default select example">
                      <option selected>Open this select Role</option>
                      <option value="MUROBI">Murobi</option>
                      <option value="MENTOR">Mentor</option>                  
                   </select>
-               </div>
             </div>
 
 

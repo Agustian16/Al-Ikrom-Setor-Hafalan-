@@ -191,11 +191,8 @@
             @endif
         
           <div class="row">
-            <div class="col-md-12">
-                <div class="card ">
-                    <div class="card-header ">
-                        <h5 class="card-title">Statistik Hafalan</h5>
-                        <p class="card-category">24 Hours performance</p>
+            <div class="col-6">
+                <h1>Data Rayon</h1>
                     </div>
           <div class="col-6">
             <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#createModal">

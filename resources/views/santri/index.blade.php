@@ -256,9 +256,14 @@
             </div>
 
             <div class="form-group">
-              <label for="exampleInputEmail1">Tingkat</label>
-              <input name="tingkat" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="tingkat" placeholder="Tingkat" >
-            </div>
+                <label for="exampleInputEmail1">Tingkat</label>
+                    <select name="tingkat" type="text" class="form-control" id="exampleInputEmail1" aria-label="Default select example">
+                       <option>Tingkat</option>
+                       <option value="X">X</option>
+                       <option value="XI">XI</option>                  
+                       <option value="XII">XII</option>
+                    </select>
+              </div>
 
             <div class="form-group">
               <label for="exampleInputEmail1">ID Rayon</label>
