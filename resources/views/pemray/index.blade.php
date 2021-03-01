@@ -45,7 +45,12 @@
                             <p>Dashboard</p>
                         </a>
                     </li>
-                  
+                    <li>
+                        <a href="./register">
+                            <i class="nc-icon nc-single-02"></i>
+                            <p>Create Acount</p>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>

@@ -14,7 +14,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="card-header">{{ __('Create Acount') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -53,9 +53,9 @@
                             <label for="role" class="col-md-4 col-form-label text-md-right">Role</label>
 
                             <div class="col-md-6">
-                            <select name="role" id="role" class="form-select" aria-label="Default select example">
+                            <select id="role" class="form-select" aria-label="Default select example">
                                 <option selected>Open this select Role</option>
-                                <option value="ADMIN">ADMIN</option>
+                                <option value="ADMIN">Admin</option>
                                 <option value="MUROBI">Murobi</option>
                                 <option value="MENTOR">Mentor</option>
                                 <option value="KEPSEK">Kepsek</option>
@@ -93,6 +93,8 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
+
+                                <a href="/admin" type="submit" class="btn btn-primary">Cancel</a>
                             </div>
                         </div>
                     </form>
