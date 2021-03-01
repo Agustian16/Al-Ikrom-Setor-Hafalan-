@@ -164,7 +164,14 @@
                             </div>
                             <div class="card-body ">
                                 <table class="table table-striped table-hover">
+                                   
+                                    @php
+                                    $i = 0;    
+                                    @endphp
+                                   
+                                    @foreach ($santris as $s )
                                     <tr>
+                                        <th>No.</th>
                                         <th>NIS</th>
                                         <th>Nama</th>
                                         <th>Rombel</th>
@@ -173,14 +180,16 @@
                                         <th>Tasmi</th>
                                     </tr>
                                     <tr>
-                                        <td>11800340</td>
-                                        <td>Umar</td>
+                                        <td>{{ ++$i  }}</td>
+                                        <td>{{ $s->nis  }}</td>
+                                        <td>{{ $s->nama  }}</td>
                                         <td>RPL</td>
-                                        <td>XII</td>
-                                        <td>JUZ 28</td>
+                                        <td>{{ $s->tingkat  }}</td>
+                                        <td>juz 28</td>
                                         <td>Belum</td>
                                     </tr>
                                   </table>
+                                  @endforeach
                             </div>
                             <div class="card-footer ">
                                 <hr>
