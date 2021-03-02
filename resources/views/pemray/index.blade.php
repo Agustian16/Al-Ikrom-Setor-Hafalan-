@@ -164,12 +164,6 @@
                             </div>
                             <div class="card-body ">
                                 <table class="table table-striped table-hover">
-                                   
-                                    @php
-                                    $i = 0;    
-                                    @endphp
-                                   
-                                    @foreach ($santris as $s )
                                     <tr>
                                         <th>No.</th>
                                         <th>NIS</th>
@@ -179,17 +173,22 @@
                                         <th>hafalan</th>
                                         <th>Tasmi</th>
                                     </tr>
-                                    <tr>
-                                        <td>{{ ++$i  }}</td>
-                                        <td>{{ $s->nis  }}</td>
-                                        <td>{{ $s->nama  }}</td>
+                                    @php
+                                    $i = 0;    
+                                    @endphp
+                                    @foreach ($santris as $s )
+                                     <tr>
+                                        <td>{{ ++$i }}</td>
+                                        <td>{{ $s->nis }}</td>
+                                        <td>{{ $s->nama }}</td>
                                         <td>RPL</td>
-                                        <td>{{ $s->tingkat  }}</td>
+                                        <td>{{ $s->tingkat }}</td>
                                         <td>juz 28</td>
                                         <td>Belum</td>
                                     </tr>
+                                    @endforeach
+
                                   </table>
-                                  @endforeach
                             </div>
                             <div class="card-footer ">
                                 <hr>

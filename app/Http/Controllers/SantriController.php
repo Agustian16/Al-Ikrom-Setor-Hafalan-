@@ -10,7 +10,7 @@ class SantriController extends Controller
     public function index()
     {
         $data_santri = Santri::all();
-        return view('santri.index',['data_santri' => $data_santri]);
+        return view('santri.index', compact('data_santri'));
     }
     public function create(Request $request)
     {

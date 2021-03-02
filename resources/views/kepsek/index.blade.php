@@ -31,7 +31,7 @@
                     <!-- <p>CT</p> -->
                 </a>
                 <a href="https://www.creative-tim.com" class="simple-text logo-normal">
-          Kepsek
+          Kunedi
           <!-- <div class="logo-image-big">
             <img src="../assets/img/logo-big.png">
           </div> -->
@@ -165,21 +165,31 @@
                             <div class="card-body ">
                                 <table class="table table-striped table-hover">
                                     <tr>
+                                        <th>No.</th>
                                         <th>NIS</th>
                                         <th>Nama</th>
                                         <th>Rombel</th>
                                         <th>Tingkat</th>
+                                        <th>Rayon</th>
                                         <th>hafalan</th>
                                         <th>Tasmi</th>
                                     </tr>
+                                    @php
+                                    $i = 0;    
+                                    @endphp
+                                    @foreach ($santris as $s )
                                     <tr>
-                                        <td>11800340</td>
-                                        <td>Umar</td>
+                                        <td>{{ ++$i  }}</td>
+                                        <td>{{ $s->nis  }}</td>
+                                        <td>{{ $s->nama  }}</td>
                                         <td>RPL</td>
-                                        <td>XII</td>
-                                        <td>JUZ 28</td>
+                                        <td>{{ $s->tingkat  }}</td>
+                                        <td>Wikrama 5</td>
+                                        <td>juz 28</td>
                                         <td>Belum</td>
                                     </tr>
+                                    
+                                  @endforeach
                                   </table>
                             </div>
                             <div class="card-footer ">
