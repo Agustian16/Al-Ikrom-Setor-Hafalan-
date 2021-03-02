@@ -209,7 +209,7 @@
             <th>Nis</th>
             <TH>Nama Santri</TH>
             <TH>Tingkat</TH>
-            <TH>ID Rayon</TH>
+            <TH>Rayon</TH>
             <TH>Alamat</TH>
             <TH>Nama Ayah</TH>
             <TH>Nama Ibu</TH>
@@ -319,7 +319,8 @@
                             <span class="copyright">
                 © <script>
                   document.write(new Date().getFullYear())
-                </script>, made with <i class="fa fa-heart heart"></i> by Santri Al-Ikrom
+                </script>, made with <i class="fa fa-heart heart"></i> by Programmer Santri Al-Ikrom
+            
               </span>
                         </div>
                     </div>

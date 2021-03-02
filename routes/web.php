@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KepsekController as KC;
 use App\Http\Controllers\PemrayController as PC;
 use App\Http\Controllers\adminController as AC;
+use App\Http\Controllers\TasmiController as TC;
 use App\Http\Controllers\HafalanController;
 use App\Http\Controllers\SantriController;
 use App\Http\Controllers\MurobiController;
@@ -109,3 +110,9 @@ Route::post('/mapel/{nis}/update', [MapelController::class, 'update']);
 Route::get('/mapel/{nis}/delete', [MapelController::class, 'delete']);
 
 // End of mapel Route
+
+// & Tasmi Route
+Route::prefix('tasmi')->group(function() {
+    Route::get('/',[TC::class,'index'])->name('tasmi.index');
+         });
+// & End of Tasmi Route
