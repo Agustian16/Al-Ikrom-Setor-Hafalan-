@@ -86,7 +86,7 @@ height: 100%;
 } 
 .myForm {
   position: relative;
-  margin-top: 50px;
+  margin-top: 20px;
   
 } 
 .myLeftCtn .butt {
