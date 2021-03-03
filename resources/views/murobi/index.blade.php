@@ -20,6 +20,7 @@
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="../assets/demo/demo.css" rel="stylesheet" />
 </head>
+@extends('data_table')
 
 <body class="">
     <div class="wrapper ">
@@ -65,7 +66,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="./surah">
+                        <a href="surah-quran">
                             <i class="nc-icon nc-book-bookmark"></i>
                             <p>Surah</p>
                         </a>
@@ -200,13 +201,16 @@
             </button>
           </div>
       
-      <TABLE class="table table-hover table-bordered dataTable" id="example" style="width:100%">
+      <TABLE class="table table-hover table-bordered dataTable" id="data-table" style="width:100%">
+        <thead>
         <tr>
             <th>ID</th>
             <TH>Nama Murobi/Mentor</TH>
             <TH>Status</TH>
             <TH>Aksi</TH>
         </tr>
+    </thead>
+    <tbody>
          @foreach($data_murobi as $murobi)
         <tr>
             <td>{{ $murobi->id}}</td>
@@ -218,6 +222,7 @@
             </td>
         </tr>
         @endforeach
+    </tbody>
       </table>
 
         </div>

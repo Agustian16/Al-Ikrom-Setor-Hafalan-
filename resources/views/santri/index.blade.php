@@ -24,6 +24,7 @@
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="../assets/demo/demo.css" rel="stylesheet" />
 </head>
+@extends('data_table')
 
 <body class="">
     <div class="wrapper ">
@@ -203,7 +204,7 @@
             </button>
           </div>
       
-      <table class="table table-bordered table-responsive-lg hover" id="myTable" style="width:100%">
+      <table class="table table-bordered table-responsive-lg hover" id="data-table" style="width:100%">
         <thead>
         <tr>
             <th>Nis</th>
@@ -230,6 +231,7 @@
             <td>{{ $santri->no_telp}}</td>
             <td>
             <a href="/santri/{{$santri->nis}}/edit" class="btn btn-warning">Edit</a>
+            <br><br>
             <a href="/santri/{{$santri->nis}}/delete" class='btn btn-danger' onclick ="return confirm('Apakah anda yakin?')">Delete</a>
             </td>
         </tr>

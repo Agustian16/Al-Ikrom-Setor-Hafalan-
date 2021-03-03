@@ -19,6 +19,7 @@
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="../assets/demo/demo.css" rel="stylesheet" />
 </head>
+@extends('data_table')
 
 <body class="">
     <div class="wrapper ">
@@ -64,7 +65,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="./surah">
+                        <a href="surah-quran">
                             <i class="nc-icon nc-book-bookmark"></i>
                             <p>Surah</p>
                         </a>
@@ -200,23 +201,27 @@
             </button>
           </div>
       
-      <TABLE class="table table-hover table-bordered dataTable" id="example" style="width:100%">
-        <tr>
-            <th>ID</th>
-            <TH>Nama Rayon</TH>
-            <TH>Pembimbing Rayon</TH>
-            <TH>Aksi</TH>
-        </tr>
+      <TABLE class="table table-hover table-bordered dataTable" id="data-table" style="width:100%">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <TH>Nama Rayon</TH>
+                <TH>Pembimbing Rayon</TH>
+                <TH>Aksi</TH>
+            </tr>
+        </thead>
          @foreach($data_rayon as $rayon)
-        <tr>
-            <td>{{ $rayon->id}}</td>
-            <td>{{ $rayon->nama_rayon}}</td>
-            <td>{{ $rayon->pembimbing_rayon}}</td>
-            <td>
-            <a href="/rayon/{{$rayon->id}}/edit" class="btn btn-warning">Edit</a>
-            <a href="/rayon/{{$rayon->id}}/delete" class='btn btn-danger' onclick ="return confirm('Apakah anda yakin?')">Delete</a>
-            </td>
-        </tr>
+        <tbody>
+            <tr>
+                <td>{{ $rayon->id}}</td>
+                <td>{{ $rayon->nama_rayon}}</td>
+                <td>{{ $rayon->pembimbing_rayon}}</td>
+                <td>
+                <a href="/rayon/{{$rayon->id}}/edit" class="btn btn-warning">Edit</a>
+                <a href="/rayon/{{$rayon->id}}/delete" class='btn btn-danger' onclick ="return confirm('Apakah anda yakin?')">Delete</a>
+                </td>
+            </tr>
+        </tbody>
         @endforeach
       </table>
 

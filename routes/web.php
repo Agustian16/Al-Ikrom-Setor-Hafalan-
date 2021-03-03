@@ -6,6 +6,7 @@ use App\Http\Controllers\KepsekController as KC;
 use App\Http\Controllers\PemrayController as PC;
 use App\Http\Controllers\adminController as AC;
 use App\Http\Controllers\TasmiController as TC;
+use App\Http\Controllers\surahController as SC;
 use App\Http\Controllers\HafalanController;
 use App\Http\Controllers\SantriController;
 use App\Http\Controllers\MurobiController;
@@ -34,8 +35,8 @@ Route::get('/', function () {
 // ? End of Welcome Route
 
 // !Login Route
-Auth::routes();
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Auth::routes();
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // !End of Login Route
 
@@ -72,6 +73,12 @@ Route::prefix('pemray')->group(function() {
 Route::resource('hafalans',HafalanController::class);
 
 // ~End of Hafafan Route
+
+// ? Surah Route
+Route::prefix('surah-quran')->group(function() {
+    Route::get('/',[SC::class,'index'])->name('admin.surah');
+         });
+// ?End of Surah Route
 
 
 // Santri Route

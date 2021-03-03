@@ -64,7 +64,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="./surah">
+                        <a href="surah-quran">
                             <i class="nc-icon nc-book-bookmark"></i>
                             <p>Surah</p>
                         </a>
