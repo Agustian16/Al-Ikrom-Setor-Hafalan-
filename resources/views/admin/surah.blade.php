@@ -63,13 +63,13 @@
                                     <p>Murobi/Mentor</p>
                                 </a>
                             </li>
-                            <li class="active ">
+                            <li >
                                 <a href="./rayon">
                                     <i class="nc-icon nc-tile-56"></i>
                                     <p>Rayon</p>
                                 </a>
                             </li>
-                            <li>
+                            <li class="active ">
                                 <a href="surah-quran">
                                     <i class="nc-icon nc-book-bookmark"></i>
                                     <p>Surah</p>
