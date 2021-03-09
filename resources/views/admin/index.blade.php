@@ -155,33 +155,35 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="card card-stats">
-                            <div class="card-body ">
-                                <div class="row">
-                                    <div class="col-5 col-md-4">
-                                        <div class="icon-big text-center icon-warning">
-                                            <img src="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNTEyIDUxMiIgaGVpZ2h0PSI1MTIiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB3aWR0aD0iNTEyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnPjxwYXRoIGQ9Im0uMDE3IDI5MS42OTl2LTE3MC4zMzZjMC0xMi4yNiAxMy4wNzQtMjAuMDkxIDIzLjg4My0xNC4zMDRsMjMyLjEgMTI0LjI1MiAyMzEuOTA1LTEyNC4xMzljMTAuODU4LTUuODEyIDIzLjk3OCAyLjExNiAyMy44ODIgMTQuNDMxbC0xLjI3MSAxNjIuODYxLTI1NC41MDcgMTE5LjM0MnoiIGZpbGw9IiNhYzVlMmUiLz48cGF0aCBkPSJtNDYyLjk2NyAyODkuODM5LTIwNi45NjcgOTcuNzYzLTIwNi45NjctOTcuNzYzYy0zLjEyNC0xLjQ3Ni01LjExNi00LjYyMS01LjExNi04LjA3NXYtMzEuMjk5bDIxMi4wODMgMTAwLjYzNCAyMTIuMDgzLTEwMC42MzV2MzEuMjk5YzAgMy40NTUtMS45OTIgNi42LTUuMTE2IDguMDc2eiIgZmlsbD0iIzZlZDVhMSIvPjxwYXRoIGQ9Im00NjguMDgzIDI1MC40NjQtMjEyLjA4MyAxMDAuNjM1LTIxMi4wODMtMTAwLjYzNXYtMTc0LjQxNmMwLTIuMjg5IDIuNDAyLTMuNzg0IDQuNDU1LTIuNzczbDIwNy42MjggMTAyLjE5NiAyMDcuNjI4LTEwMi4xOTZjMi4wNTQtMS4wMTEgNC40NTUuNDg0IDQuNDU1IDIuNzczeiIgZmlsbD0iI2ViZWJlYiIvPjxwYXRoIGQ9Im01MDMuMTQ0IDMwNS4wMzYtNDM1LjAwNiAyMDUuNDhjLTcuNzE3IDMuNjQ1LTE2LjkyNy4zNDQtMjAuNTcyLTcuMzcyLTMuNjQ1LTcuNzE3LS4zNDQtMTYuOTI3IDcuMzcyLTIwLjU3Mmw0MzUuMDA2LTIwNS40OGM3LjcxNy0zLjY0NSAxNi45MjctLjM0NCAyMC41NzIgNy4zNzIgMy42NDUgNy43MTcuMzQ0IDE2LjkyNy03LjM3MiAyMC41NzJ6IiBmaWxsPSIjZDc3ZjRhIi8+PHBhdGggZD0ibTguODU2IDMwNS4wMzYgNDM1LjAwNiAyMDUuNDhjNy43MTcgMy42NDUgMTYuOTI3LjM0NCAyMC41NzItNy4zNzIgMy42NDUtNy43MTcuMzQ0LTE2LjkyNy03LjM3Mi0yMC41NzJsLTQzNS4wMDYtMjA1LjQ4Yy03LjcxNy0zLjY0NS0xNi45MjctLjM0NC0yMC41NzIgNy4zNzItMy42NDUgNy43MTctLjM0NCAxNi45MjcgNy4zNzIgMjAuNTcyeiIgZmlsbD0iI2M4NmQzNiIvPjxwYXRoIGQ9Im0yNTYgMzUxLjA5OXYtMTc1LjYyOGwtMTEwLjEwMi0xNzQuNTI5Yy0xLjExNy0xLjcyMS0zLjc4OS0uOTMtMy43ODkgMS4xMjJ2MTg4LjQ0NWMwIC40MzQuMTM3Ljg1Ny4zOTIgMS4yMDl6IiBmaWxsPSIjZTJlMmUyIi8+PHBhdGggZD0ibTI1NiAzNTEuMDk5di0xNzUuNjI4bDExMC4xMDItMTc0LjUyOWMxLjExNy0xLjcyMSAzLjc4OS0uOTMgMy43ODkgMS4xMjJ2MTg4LjQ0NWMwIC40MzQtLjEzNy44NTctLjM5MiAxLjIwOXoiIGZpbGw9IiNlMmUyZTIiLz48cGF0aCBkPSJtMjU2IDE2Mi4xMjNjLTQuMTQzIDAtNy41IDMuMzU4LTcuNSA3LjV2Mjk0LjE1N2MwIDQuMTQyIDMuMzU3IDcuNSA3LjUgNy41czcuNS0zLjM1OCA3LjUtNy41di0yOTQuMTU3YzAtNC4xNDItMy4zNTctNy41LTcuNS03LjV6IiBmaWxsPSIjNWE1YTVhIi8+PHBhdGggZD0ibTI2NS41MjEgNTAwLjU0OWgtMTkuMjM4Yy0yLjA4NCAwLTMuNzczLTEuNjg5LTMuNzczLTMuNzczdi0yOS4xMTNjMC03LjM5NiA1Ljk5Ni0xMy4zOTIgMTMuMzkyLTEzLjM5MiA3LjM5NiAwIDEzLjM5MiA1Ljk5NiAxMy4zOTIgMTMuMzkydjI5LjExM2MuMDAxIDIuMDg0LTEuNjg5IDMuNzczLTMuNzczIDMuNzczeiIgZmlsbD0iI2ViNTU2OSIvPjwvZz48L3N2Zz4="
-                                            />
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="card card-stats">
+                                    <a href="" data-toggle="modal" data-target="#createModaltasmi">
+                                        <div class="card-body ">
+                                            <div class="row">
+                                                <div class="col-5 col-md-4">
+                                                    <div class="icon-big text-center icon-warning">
+                                                        <img src="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNTEyIDUxMiIgaGVpZ2h0PSI1MTIiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB3aWR0aD0iNTEyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnPjxwYXRoIGQ9Im0uMDE3IDI5MS42OTl2LTE3MC4zMzZjMC0xMi4yNiAxMy4wNzQtMjAuMDkxIDIzLjg4My0xNC4zMDRsMjMyLjEgMTI0LjI1MiAyMzEuOTA1LTEyNC4xMzljMTAuODU4LTUuODEyIDIzLjk3OCAyLjExNiAyMy44ODIgMTQuNDMxbC0xLjI3MSAxNjIuODYxLTI1NC41MDcgMTE5LjM0MnoiIGZpbGw9IiNhYzVlMmUiLz48cGF0aCBkPSJtNDYyLjk2NyAyODkuODM5LTIwNi45NjcgOTcuNzYzLTIwNi45NjctOTcuNzYzYy0zLjEyNC0xLjQ3Ni01LjExNi00LjYyMS01LjExNi04LjA3NXYtMzEuMjk5bDIxMi4wODMgMTAwLjYzNCAyMTIuMDgzLTEwMC42MzV2MzEuMjk5YzAgMy40NTUtMS45OTIgNi42LTUuMTE2IDguMDc2eiIgZmlsbD0iIzZlZDVhMSIvPjxwYXRoIGQ9Im00NjguMDgzIDI1MC40NjQtMjEyLjA4MyAxMDAuNjM1LTIxMi4wODMtMTAwLjYzNXYtMTc0LjQxNmMwLTIuMjg5IDIuNDAyLTMuNzg0IDQuNDU1LTIuNzczbDIwNy42MjggMTAyLjE5NiAyMDcuNjI4LTEwMi4xOTZjMi4wNTQtMS4wMTEgNC40NTUuNDg0IDQuNDU1IDIuNzczeiIgZmlsbD0iI2ViZWJlYiIvPjxwYXRoIGQ9Im01MDMuMTQ0IDMwNS4wMzYtNDM1LjAwNiAyMDUuNDhjLTcuNzE3IDMuNjQ1LTE2LjkyNy4zNDQtMjAuNTcyLTcuMzcyLTMuNjQ1LTcuNzE3LS4zNDQtMTYuOTI3IDcuMzcyLTIwLjU3Mmw0MzUuMDA2LTIwNS40OGM3LjcxNy0zLjY0NSAxNi45MjctLjM0NCAyMC41NzIgNy4zNzIgMy42NDUgNy43MTcuMzQ0IDE2LjkyNy03LjM3MiAyMC41NzJ6IiBmaWxsPSIjZDc3ZjRhIi8+PHBhdGggZD0ibTguODU2IDMwNS4wMzYgNDM1LjAwNiAyMDUuNDhjNy43MTcgMy42NDUgMTYuOTI3LjM0NCAyMC41NzItNy4zNzIgMy42NDUtNy43MTcuMzQ0LTE2LjkyNy03LjM3Mi0yMC41NzJsLTQzNS4wMDYtMjA1LjQ4Yy03LjcxNy0zLjY0NS0xNi45MjctLjM0NC0yMC41NzIgNy4zNzItMy42NDUgNy43MTctLjM0NCAxNi45MjcgNy4zNzIgMjAuNTcyeiIgZmlsbD0iI2M4NmQzNiIvPjxwYXRoIGQ9Im0yNTYgMzUxLjA5OXYtMTc1LjYyOGwtMTEwLjEwMi0xNzQuNTI5Yy0xLjExNy0xLjcyMS0zLjc4OS0uOTMtMy43ODkgMS4xMjJ2MTg4LjQ0NWMwIC40MzQuMTM3Ljg1Ny4zOTIgMS4yMDl6IiBmaWxsPSIjZTJlMmUyIi8+PHBhdGggZD0ibTI1NiAzNTEuMDk5di0xNzUuNjI4bDExMC4xMDItMTc0LjUyOWMxLjExNy0xLjcyMSAzLjc4OS0uOTMgMy43ODkgMS4xMjJ2MTg4LjQ0NWMwIC40MzQtLjEzNy44NTctLjM5MiAxLjIwOXoiIGZpbGw9IiNlMmUyZTIiLz48cGF0aCBkPSJtMjU2IDE2Mi4xMjNjLTQuMTQzIDAtNy41IDMuMzU4LTcuNSA3LjV2Mjk0LjE1N2MwIDQuMTQyIDMuMzU3IDcuNSA3LjUgNy41czcuNS0zLjM1OCA3LjUtNy41di0yOTQuMTU3YzAtNC4xNDItMy4zNTctNy41LTcuNS03LjV6IiBmaWxsPSIjNWE1YTVhIi8+PHBhdGggZD0ibTI2NS41MjEgNTAwLjU0OWgtMTkuMjM4Yy0yLjA4NCAwLTMuNzczLTEuNjg5LTMuNzczLTMuNzczdi0yOS4xMTNjMC03LjM5NiA1Ljk5Ni0xMy4zOTIgMTMuMzkyLTEzLjM5MiA3LjM5NiAwIDEzLjM5MiA1Ljk5NiAxMy4zOTIgMTMuMzkydjI5LjExM2MuMDAxIDIuMDg0LTEuNjg5IDMuNzczLTMuNzczIDMuNzczeiIgZmlsbD0iI2ViNTU2OSIvPjwvZz48L3N2Zz4="
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div class="col-7 col-md-8">
+                                                    <div class="numbers">
+                                                        <p class="card-category">SANTRI TASMI</p>
+                                                        <p class="card-title">10
+                                                        <p>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-7 col-md-8">
-                                        <div class="numbers">
-                                            <p class="card-category">SANTRI TASMI</p>
-                                            <p class="card-title">10
-                                                <p>
+                                        <div class="card-footer ">
+                                            <hr>
+                                            <div class="stats">
+                                                <i class="fa fa-calendar-o"></i> Last day
+                                            </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
-                            <div class="card-footer ">
-                                <hr>
-                                <div class="stats">
-                                    <i class="fa fa-calendar-o"></i> Last day
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
 
                 </div>
@@ -267,6 +269,41 @@
             </footer>
         </div>
     </div>
+
+    <!-- Modal Create tasmi -->
+    <div class="modal fade" id="createModaltasmi" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Silahkan Isi</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              {{csrf_field()}}
+              
+              <table class="table table-hover table-bordered dataTable" id="data-table" style="width:100%">
+                      <tr>
+                          <td>Nomor</td>
+                          <td>Nama</td>
+                          <td>Rayon</td>
+                      </tr>
+                      <tr>
+                          <td>1</td>
+                          <td>Ibrahim surya kelana</td>
+                          <td>Wikrama 5</td>
+                      </tr>
+              </table>
+  
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>   
+    
     <!--   Core JS Files   -->
     <script src="../assets/js/core/jquery.min.js"></script>
     <script src="../assets/js/core/popper.min.js"></script>
