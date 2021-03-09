@@ -244,7 +244,7 @@
             {{csrf_field()}}
             
             <div class="form-group">
-              <label for="exampleInputEmail1">Nama Murobi/Mentro</label>
+              <label for="exampleInputEmail1">Nama Murobi/Mentor</label>
               <input name="nama_murobi" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="nama_murobi"  placeholder="Nama murobi/mentor">
             </div>
 
